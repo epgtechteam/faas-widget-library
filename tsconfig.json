@@ -1,3 +1,10 @@
+/*
+  Vite ONLY performs transpilation on .ts files and doees not do
+  type checking with the assumption that type checking is done by
+  the editor or build tool.
+  
+  Readmore: https://vite.dev/guide/features.html#transpile-only
+*/
 {
   "files": [],
   "references": [
