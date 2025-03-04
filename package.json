@@ -3,6 +3,14 @@
   "private": true,
   "version": "0.0.0",
   "type": "module",
+  "main": "./dist/faas-widget-library.umd.cjs",
+  "module": "./dist/faas-widget-library",
+  "exports": {
+    ".": {
+      "import": "./dist/faas-widget-library",
+      "require": "./dist/faas-widget-library.umd.cjs"
+    }
+  },
   "scripts": {
     "dev": "vite",
     "build": "tsc -b && vite build",
@@ -17,6 +25,7 @@
   },
   "devDependencies": {
     "@eslint/js": "^9.21.0",
+    "@types/node": "^22.13.9",
     "@types/react": "^19.0.10",
     "@types/react-dom": "^19.0.4",
     "@vitejs/plugin-react": "^4.3.4",
