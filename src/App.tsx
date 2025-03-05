@@ -31,7 +31,7 @@ const App: React.FC<IntuitWidgetProps> = (props?: IntuitWidgetProps) => {
             }
             const propsToJson = JSON.stringify(props);
             if (propsToJson.length === 0) {
-                console.warn("Props are empty");
+                console.warn("Props are now 100% empty");
                 return;
             }
             console.log(propsToJson);

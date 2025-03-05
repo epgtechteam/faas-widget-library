@@ -3,12 +3,13 @@ import { dirname, resolve } from 'node:path'
 import react from '@vitejs/plugin-react'
 import tailwindcss from '@tailwindcss/vite'
 import { fileURLToPath } from 'node:url'
+import dtsPlugin from 'vite-plugin-dts'
 
 const __dirname = dirname(fileURLToPath(import.meta.url))
 
 // https://vite.dev/config/
 export default defineConfig({
-  plugins: [react(), tailwindcss()],
+  plugins: [react(), tailwindcss(), dtsPlugin({ tsconfigPath: './tsconfig.app.json', rollupTypes: true })],
   resolve: {
     alias: {
       // Map @ to /src
@@ -18,10 +19,9 @@ export default defineConfig({
   // Library build configuration: https://vite.dev/guide/build.html#library-mode
   build: {
     lib: {
-      entry: resolve(__dirname, ''),
-      name: 'FaaSWidgetLibrary',
+      entry: resolve(__dirname, 'src/lib/entry.ts'),
+      name: 'FaasWidgetLibrary',
       fileName: 'faas-widget-library',
-      formats: ['cjs'],
     },
     rollupOptions: {
       // Externalize deps that shouldn't be bundled with the library

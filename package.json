@@ -4,10 +4,12 @@
   "version": "0.0.0",
   "type": "module",
   "main": "./dist/faas-widget-library.umd.cjs",
-  "module": "./dist/faas-widget-library",
+  "module": "./dist/faas-widget-library.js",
+  "types": "./dist/faas-widget-library.d.ts",
   "exports": {
     ".": {
-      "import": "./dist/faas-widget-library",
+      "import": "./dist/faas-widget-library.js",
+      "types": "./dist/faas-widget-library.d.ts",
       "require": "./dist/faas-widget-library.umd.cjs"
     }
   },
@@ -21,7 +23,8 @@
     "@tailwindcss/vite": "^4.0.9",
     "react": "^19.0.0",
     "react-dom": "^19.0.0",
-    "tailwindcss": "^4.0.9"
+    "tailwindcss": "^4.0.9",
+    "vite-plugin-dts": "^4.5.3"
   },
   "devDependencies": {
     "@eslint/js": "^9.21.0",
