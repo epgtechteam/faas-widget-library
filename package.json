@@ -8,7 +8,7 @@
     "url": "https://github.com/epgtechteam/faas-widget-library.git"
   },
   "publishConfig": {
-    "registry": "https://npm.pkg.github.com"
+    "registry": "https://registry.npmjs.org"
   },
   "main": "./dist/faas-widget-library.umd.cjs",
   "module": "./dist/faas-widget-library.js",
