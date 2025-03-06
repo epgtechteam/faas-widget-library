@@ -21,6 +21,9 @@
       "require": "./dist/faas-widget-library.umd.cjs"
     }
   },
+  "files": [
+    "/dist"
+  ],
   "scripts": {
     "dev": "vite",
     "build": "tsc -b && vite build",
