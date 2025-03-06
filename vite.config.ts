@@ -10,6 +10,7 @@ const __dirname = dirname(fileURLToPath(import.meta.url))
 // https://vite.dev/config/
 export default defineConfig({
   plugins: [react(), tailwindcss(), dtsPlugin({ tsconfigPath: './tsconfig.app.json', rollupTypes: true })],
+  publicDir: 'public',
   resolve: {
     alias: {
       // Map @ to /src
@@ -18,10 +19,13 @@ export default defineConfig({
   },
   // Library build configuration: https://vite.dev/guide/build.html#library-mode
   build: {
+    emptyOutDir: true, // Clear out the dist directory before building
+    sourcemap: true, // Enable sourcemaps for debugging
     lib: {
       entry: resolve(__dirname, 'src/lib/entry.ts'),
       name: 'FaasWidgetLibrary',
-      fileName: 'faas-widget-library',
+      fileName: "index",
+      formats: ['es']
     },
     rollupOptions: {
       // Externalize deps that shouldn't be bundled with the library
