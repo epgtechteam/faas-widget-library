@@ -5,6 +5,7 @@ import {
     onEvent,
     onSuccessEvent,
 } from "@/@types/widget";
+import "@/global.css";
 
 export type IntuitWidgetProps = {
     data?: FaasWidgetProps;

@@ -25,7 +25,7 @@
   ],
   "scripts": {
     "dev": "vite",
-    "build": "tsc -b && vite build && tailwindcss -o dist/index.css --minify",
+    "build": "tsc -b && vite build",
     "lint": "eslint .",
     "preview": "vite preview"
   },
