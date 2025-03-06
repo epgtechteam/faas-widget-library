@@ -1,8 +1,15 @@
 {
-  "name": "faas-widget-library",
-  "private": true,
+  "name": "@epgtechteam/faas-widget-library",
+  "private": false,
   "version": "0.0.0",
   "type": "module",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/epgtechteam/faas-widget-library.git"
+  },
+  "publishConfig": {
+    "registry": "https://npm.pkg.github.com"
+  },
   "main": "./dist/faas-widget-library.umd.cjs",
   "module": "./dist/faas-widget-library.js",
   "types": "./dist/faas-widget-library.d.ts",
