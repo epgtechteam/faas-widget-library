@@ -5,7 +5,6 @@ import {
     IntuitFinancingProps,
 } from "../";
 import React from "react";
-import "../dist/index.css";
 
 const DemoApp: React.FC = () => {
     const props: IntuitFinancingProps = {

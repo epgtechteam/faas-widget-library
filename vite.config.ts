@@ -16,12 +16,20 @@ export default defineConfig({
       name: 'FaasWidgetLibrary',
       cssFileName: "index",
       fileName: (format) => `index.${format}.js`,
+      formats: ['es']
     },
     rollupOptions: {
       makeAbsoluteExternalsRelative: true,
       // Externalize deps that shouldn't be bundled with the library
       external: ['react', 'react-dom'],
       output: {
+        intro: async (chunk) => {
+          // Inject CSS import for the UMD build
+          if (chunk.fileName === 'index.es.js') {
+            return 'import "./index.css";'
+          }
+          return '';
+        },
         // Provide global variables to use in the UMD build
         // for externalized deps
         globals: {
