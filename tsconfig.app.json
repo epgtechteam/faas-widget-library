@@ -1,9 +1,7 @@
 {
   "compilerOptions": {
     "tsBuildInfoFile": "./node_modules/.tmp/tsconfig.app.tsbuildinfo",
-    // https://vite.dev/guide/features.html#target
     "target": "ES2020",
-    // https://vite.dev/guide/features.html#usedefineforclassfields
     "useDefineForClassFields": true,
     "lib": ["ES2020", "DOM", "DOM.Iterable"],
     "module": "ESNext",
@@ -12,8 +10,6 @@
     /* Bundler mode */
     "moduleResolution": "bundler",
     "allowImportingTsExtensions": true,
-
-    // https://vite.dev/guide/features.html#isolatedmodules
     "isolatedModules": true,
     "moduleDetection": "force",
     "noEmit": true,
@@ -25,15 +21,6 @@
     "noUnusedParameters": true,
     "noFallthroughCasesInSwitch": true,
     "noUncheckedSideEffectImports": true,
-
-    /* Paths
-      Path aliases should be 1:1 with the Vite config ~ vite.config.ts
-    */
-    "baseUrl": ".",
-    "paths": {
-      "@/*": ["src/*"]
-    }
   },
-  "include": ["src"],
-  "exclude": ["node_modules"]
+  "include": ["lib"],
 }

@@ -1,29 +1,26 @@
 import React, { useEffect } from "react";
 import {
-    FaasWidgetProps,
-    onErrorEvent,
-    onEvent,
-    onSuccessEvent,
-} from "@/@types/widget";
-import "@/global.css";
+    FinancingEnvironment,
+    FinancingPIIData,
+    FinancingType,
+} from "../../@types/financing";
+import { onErrorEvent, onEvent, onSuccessEvent } from "../../@types/events";
+import { ServiceTitanHeaderInfo } from "../../@types/isv";
 
-export type IntuitWidgetProps = {
-    data?: FaasWidgetProps;
+export type IntuitFinancingProps = {
+    data?: FinancingPIIData;
     bearerToken?: string;
-    offerType?: string;
-    env?: string; // E2E or PRD
-    headerInfo?: {
-        // This object will be passed in headers for tracking
-        xCorrelationid: string;
-        xPartnerId: string;
-        xMerchantid: string;
-    };
+    offerType?: FinancingType;
+    env?: FinancingEnvironment;
+    headerInfo?: ServiceTitanHeaderInfo;
     onSuccess?: onSuccessEvent;
     onError?: onErrorEvent;
     onEvent?: onEvent;
 };
 
-const App: React.FC<IntuitWidgetProps> = (props?: IntuitWidgetProps) => {
+const IntuitFinancing: React.FC<IntuitFinancingProps> = (
+    props?: IntuitFinancingProps
+) => {
     const logPropsOnMount = () => {
         try {
             if (!props) {
@@ -57,4 +54,4 @@ const App: React.FC<IntuitWidgetProps> = (props?: IntuitWidgetProps) => {
     );
 };
 
-export default App;
+export default IntuitFinancing;
