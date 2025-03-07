@@ -14,6 +14,7 @@ export default defineConfig({
     lib: {
       entry: resolve(__dirname, 'lib/index.ts'),
       name: 'FaasWidgetLibrary',
+      cssFileName: "index",
       fileName: (format) => `index.${format}.js`,
     },
     rollupOptions: {
@@ -26,7 +27,6 @@ export default defineConfig({
         globals: {
           react: 'React',
           'react-dom': 'ReactDOM',
-          tailwindcss: 'tailwindcss',
         },
       },
     },

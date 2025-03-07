@@ -11,15 +11,16 @@
     "access": "public",
     "registry": "https://registry.npmjs.org"
   },
-  "types": "./dist/index.d.ts",
   "main": "./dist/index.umd.js",
+  "types": "./dist/index.d.ts",
   "module": "./dist/index.es.js",
   "exports": {
     ".": {
       "types": "./dist/index.d.ts",
       "import": "./dist/index.es.js",
       "require": "./dist/index.umd.js"
-    }
+    },
+    "./index.css": "./dist/index.css"
   },
   "files": [
     "dist"
@@ -35,8 +36,8 @@
     "react-dom": "^19.0.0"
   },
   "devDependencies": {
-    "@tailwindcss/cli": "^4.0.11",
     "@eslint/js": "^9.21.0",
+    "@tailwindcss/cli": "^4.0.11",
     "@tailwindcss/vite": "^4.0.11",
     "@types/node": "^22.13.9",
     "@types/react": "^19.0.10",

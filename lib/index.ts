@@ -1,4 +1,5 @@
 import IntuitFinancing, { IntuitFinancingProps } from "./components/IntuitFinancing";
+import "./index.css";
 
 // Export Components and their Prop Types
 export { IntuitFinancing };
